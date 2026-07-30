@@ -45,12 +45,12 @@ CREATE TABLE alunos (
 ```
 
 ## **Como executar**
-1.Clone este repositório.
-2.Crie o banco e a tabela no PostgreSQL.
-3.Crie um arquivo Conexao.java com suas credenciais locais do PostgreSQL.
-4.Abra o projeto no **Visual Studio Code**.
-5.Execute a classe Main.java.
--O arquivo Conexao.java não está no repositório para proteger as credenciais do banco de dados.
+1. Clone este repositório.
+2. Crie o banco e a tabela no PostgreSQL.
+3. Crie um arquivo Conexao.java com suas credenciais locais do PostgreSQL.
+4. Abra o projeto no **Visual Studio Code**.
+5. Execute a classe Main.java.
+-O arquivo **Conexao.java** não está no repositório para proteger as credenciais do banco de dados.
 
 ## **Próximas melhorias**
 - Editar dados de um aluno
