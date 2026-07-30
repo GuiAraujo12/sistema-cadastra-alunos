@@ -12,6 +12,7 @@ public class Main {
             System.out.println("1. Cadastrar aluno");
             System.out.println("2. Deletar aluno");
             System.out.println("3. Ver informações do aluno");
+            System.out.println("4. Alterar Email");
             System.out.println("0. Sair");
             System.out.print("Escolha uma opção: ");
 
@@ -49,11 +50,22 @@ public class Main {
                     break;
                 }
 
-                case 0:
+                case 4: {
+                    System.out.print("Digite a matricula: ");
+                    String matricula = sc.nextLine();
+                    System.out.println("Digite o novo email: ");
+                    String novoEmail = sc.nextLine();
+
+                    alteraDadosEmail(matricula, novoEmail);
+                    break;
+                }
+
+                case 0: {
                     System.out.println("Sistema encerrado.");
                     executando = false;
                     break;
-
+                }
+                
                 default:
                     System.out.println("Opção inválida.");
             }
@@ -77,6 +89,9 @@ public class Main {
             System.out.println("Não foi possivel deletar o aluno");
         }
         
+    }
+    public static void alteraDadosEmail(String matricula, String novoEmail){
+        System.out.println(sa.alteraEmail(matricula, novoEmail));
     }
 
     public static void infoAluno(String matricula) {

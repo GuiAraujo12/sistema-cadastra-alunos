@@ -18,6 +18,13 @@ public class SistemaAlunos {
         return "ERRO AO CADASTRAR ALUNO";
     }
 
+    public String alteraEmail(String matricula, String novoEmail){
+        if(alunoDAO.alterar(matricula, novoEmail)){
+            return "Email alterado para " + novoEmail;
+        }
+        return "ERRO AO ALTERAR EMAIL!!";
+    }
+
     private LocalDate retornaData(String nascimento){
         DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         LocalDate data = LocalDate.parse(nascimento, formato);

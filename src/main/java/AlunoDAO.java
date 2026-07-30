@@ -32,6 +32,28 @@ public class AlunoDAO {
         return null;
     }
 
+    public boolean alterar(String matricula, String novoEmail) {
+        String sql = """
+                UPDATE alunos
+                SET email = ?
+                WHERE matricula = ?;
+                """;
+
+        try (Connection conexao = Conexao.conectar();
+            PreparedStatement comando = conexao.prepareStatement(sql)) {
+
+            comando.setString(1, novoEmail);
+            comando.setString(2, matricula);
+
+            int linhasAfetadas = comando.executeUpdate();
+            return linhasAfetadas > 0;
+            
+        } catch (SQLException e) {
+            System.out.println("Erro ao alterar email: " + e.getMessage());
+            return false;
+        }
+    }
+
     public boolean deletar(String matricula) {
         String sql = """
                 DELETE FROM alunos
