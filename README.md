@@ -43,6 +43,16 @@ CREATE TABLE alunos (
     data_nascimento DATE NOT NULL
 );
 ```
+3.Para a geração de matriculas:
+```sql
+CREATE SEQUENCE matricula_seq START WITH 1;
+
+ALTER TABLE alunos
+ALTER COLUMN matricula
+SET DEFAULT (
+    '2026' || LPAD(nextval('matricula_seq')::text, 3, '0')
+);
+```
 
 ## **Como executar**
 1. Clone este repositório.
