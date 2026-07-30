@@ -34,7 +34,7 @@ src/main/java/
 ```sql
 CREATE DATABASE sistema_alunos;
 ```
-2.No banco **sistema_alunos**, crie a tabela:
+2.No banco `sistema_alunos`, crie a tabela:
 ```sql
 CREATE TABLE alunos (
     matricula VARCHAR(20) PRIMARY KEY,
@@ -50,7 +50,7 @@ CREATE TABLE alunos (
 3. Crie um arquivo Conexao.java com suas credenciais locais do PostgreSQL.
 4. Abra o projeto no **Visual Studio Code**.
 5. Execute a classe Main.java.
--O arquivo **Conexao.java** não está no repositório para proteger as credenciais do banco de dados.
+> **Observação:** o arquivo `Conexao.java` não foi enviado ao repositório para proteger as credenciais do banco.
 
 ## **Próximas melhorias**
 - Editar dados de um aluno
