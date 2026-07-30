@@ -1,0 +1,6 @@
+target/
+bin/
+.vscode/
+*.class
+src/main/java/Conexao.java
+*.session.sql
